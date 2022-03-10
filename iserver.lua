@@ -2,7 +2,7 @@ local ESX = nil
 TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
 
 RegisterServerEvent("<<DakoM>>:PaymentGoFastDrogues")
-AddEventHandler("<<DakoM>>:GoFastPayment", function(moneynmbr)
+AddEventHandler("<<DakoM>>:PaymentGoFastDrogues", function(moneynmbr)
     if #(GetEntityCoords(GetPlayerPed(source)) - vector3(-63.25835, -1213.338, 27.54354)) < 20.0 then -- SI VOUS CHANGER LA POSTION DU RACHETEUR CHANGER LA ICI AUSSI !!
         local xPlayer = ESX.GetPlayerFromId(source)
         xPlayer.addMoney(moneynmbr)
